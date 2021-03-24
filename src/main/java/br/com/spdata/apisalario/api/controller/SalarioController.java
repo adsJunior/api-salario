@@ -19,12 +19,12 @@ import br.com.spdata.domain.service.SalarioService;
 public class SalarioController {
 
 	@Autowired
-	private SalarioService salarioCalculador;
+	private SalarioService salarioService;
 	
 	@GetMapping("/{salarioBruto}")
 	public ResponseEntity<BigDecimal> getSalarioLiquido(@PathVariable BigDecimal salarioBruto, 
 			@RequestBody DescontosModel descontos) {
-		BigDecimal salarioLiquido = salarioCalculador.calculaSalarioLiquido(salarioBruto, 
+		BigDecimal salarioLiquido = salarioService.calculaSalarioLiquido(salarioBruto, 
 				new DescontosDto(descontos));
 		return ResponseEntity.ok(salarioLiquido);
 	}
