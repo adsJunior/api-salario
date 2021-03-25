@@ -1,10 +1,10 @@
-package br.com.spdata.domain.service;
+package br.com.spdata.apisalario.domain.service;
 
 import java.math.BigDecimal;
 
 import org.springframework.stereotype.Service;
 
-import br.com.spdata.domain.dto.DescontosDto;
+import br.com.spdata.apisalario.domain.dto.DescontosDto;
 
 @Service
 public class SalarioService {

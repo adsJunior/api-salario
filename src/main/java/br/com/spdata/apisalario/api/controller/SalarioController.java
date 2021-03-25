@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.spdata.apisalario.api.model.DescontosModel;
-import br.com.spdata.domain.dto.DescontosDto;
-import br.com.spdata.domain.service.SalarioService;
+import br.com.spdata.apisalario.domain.dto.DescontosDto;
+import br.com.spdata.apisalario.domain.service.SalarioService;
 
 @RestController
 @RequestMapping("/salario")

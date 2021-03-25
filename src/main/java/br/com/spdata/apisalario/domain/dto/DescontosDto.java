@@ -1,4 +1,4 @@
-package br.com.spdata.domain.dto;
+package br.com.spdata.apisalario.domain.dto;
 
 import java.math.BigDecimal;
 
