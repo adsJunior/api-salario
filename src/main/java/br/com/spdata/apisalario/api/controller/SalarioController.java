@@ -10,8 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.spdata.apisalario.api.model.DescontosModel;
-import br.com.spdata.apisalario.domain.dto.DescontosDto;
+import br.com.spdata.apisalario.api.model.ParametrosModel;
 import br.com.spdata.apisalario.domain.service.SalarioService;
 
 @RestController
@@ -23,9 +22,13 @@ public class SalarioController {
 	
 	@GetMapping("/{salarioBruto}")
 	public ResponseEntity<BigDecimal> getSalarioLiquido(@PathVariable BigDecimal salarioBruto, 
-			@RequestBody DescontosModel descontos) {
-		BigDecimal salarioLiquido = salarioService.calculaSalarioLiquido(salarioBruto, 
-				new DescontosDto(descontos));
+			@RequestBody ParametrosModel parametros) {
+		
+		if(salarioBruto.equals(new BigDecimal("0.00"))) {
+			return ResponseEntity.badRequest().build();
+		}
+		
+		BigDecimal salarioLiquido = salarioService.calculaSalarioLiquido(salarioBruto, parametros);
 		return ResponseEntity.ok(salarioLiquido);
 	}
 }

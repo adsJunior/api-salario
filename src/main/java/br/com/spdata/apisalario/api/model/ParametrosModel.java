@@ -1,21 +1,8 @@
-package br.com.spdata.apisalario.domain.dto;
+package br.com.spdata.apisalario.api.model;
 
 import java.math.BigDecimal;
 
-import br.com.spdata.apisalario.api.model.DescontosModel;
-
-public class DescontosDto {
-	
-	public DescontosDto() {
-		super();
-	}
-	
-	public DescontosDto(DescontosModel descontoModel) {
-		valeAlimentacao = descontoModel.getValeAlimentacao();
-		valeTransporte = descontoModel.getValeTransporte();
-		assistenciaMedica = descontoModel.getAssistenciaMedica();
-		previdenciaPrivada = descontoModel.getPrevidenciaPrivada();
-	}
+public class ParametrosModel {
 
 	private BigDecimal valeTransporte;
 	
@@ -24,6 +11,8 @@ public class DescontosDto {
 	private BigDecimal assistenciaMedica;
 	
 	private BigDecimal previdenciaPrivada;
+	
+	private int numeroDependentes;
 
 	public BigDecimal getValeTransporte() {
 		return valeTransporte;
@@ -55,5 +44,13 @@ public class DescontosDto {
 
 	public void setPrevidenciaPrivada(BigDecimal previdenciaPrivada) {
 		this.previdenciaPrivada = previdenciaPrivada;
+	}
+
+	public int getNumeroDependentes() {
+		return numeroDependentes;
+	}
+
+	public void setNumeroDependentes(int numeroDependentes) {
+		this.numeroDependentes = numeroDependentes;
 	}
 }
