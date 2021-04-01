@@ -37,7 +37,7 @@ public class SalarioService {
 		return salarioLiquido.setScale(2, RoundingMode.HALF_EVEN);
 	}
 
-	private BigDecimal obterDescontoInss(BigDecimal salarioBruto) {
+	public BigDecimal obterDescontoInss(BigDecimal salarioBruto) {
 		
 		BigDecimal aliquotaFinal = new BigDecimal("6433.57");
 		if(salarioBruto.compareTo(aliquotaFinal) > 0) {
@@ -82,7 +82,7 @@ public class SalarioService {
 		return new BigDecimal("0.00");
 	}
 	
-	private BigDecimal obterDescontoImpostoDeRenda(BigDecimal salarioLiquido, int numeroDependentes) {
+	public BigDecimal obterDescontoImpostoDeRenda(BigDecimal salarioLiquido, int numeroDependentes) {
 		
 		BigDecimal deducaoDependentes = new BigDecimal("189.59").multiply(new BigDecimal(numeroDependentes));
 		
@@ -121,7 +121,7 @@ public class SalarioService {
 		return aliquotas;
 	}
 
-	private BigDecimal subtrairDescontos(ParametrosModel parametros, BigDecimal salarioLiquido) {
+	public BigDecimal subtrairDescontos(ParametrosModel parametros, BigDecimal salarioLiquido) {
 
 		if (parametros.getAssistenciaMedica() != null) {
 			salarioLiquido = salarioLiquido.subtract(parametros.getAssistenciaMedica());
