@@ -11,7 +11,7 @@ import java.util.TreeMap;
 import org.springframework.stereotype.Service;
 
 import br.com.spdata.apisalario.api.model.ParametrosModel;
-import br.com.spdata.apisalario.domain.SalarioInvalidoException;
+import br.com.spdata.apisalario.domain.exception.SalarioInvalidoException;
 import br.com.spdata.apisalario.domain.model.AliquotaIrrfModel;
 
 @Service
@@ -84,14 +84,9 @@ public class SalarioService {
 	
 	private BigDecimal obterDescontoImpostoDeRenda(BigDecimal salarioLiquido, int numeroDependentes) {
 		
-		BigDecimal impostoDeRenda = new BigDecimal("0.00");
 		BigDecimal deducaoDependentes = new BigDecimal("189.59").multiply(new BigDecimal(numeroDependentes));
 		
 		BigDecimal salarioBase = salarioLiquido.subtract(deducaoDependentes);
-		
-		if(salarioBase.compareTo(new BigDecimal("1903.98")) < 0) {
-			return impostoDeRenda;
-		}
 		
 		List<AliquotaIrrfModel> aliquotas = obterAliquotasIrrf();
 		
