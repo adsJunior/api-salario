@@ -24,10 +24,6 @@ public class SalarioController {
 	public ResponseEntity<BigDecimal> getSalarioLiquido(@PathVariable BigDecimal salarioBruto, 
 			@RequestBody ParametrosModel parametros) {
 		
-		if(salarioBruto.equals(new BigDecimal("0.00"))) {
-			return ResponseEntity.badRequest().build();
-		}
-		
 		BigDecimal salarioLiquido = salarioService.calculaSalarioLiquido(salarioBruto, parametros);
 		return ResponseEntity.ok(salarioLiquido);
 	}

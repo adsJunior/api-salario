@@ -11,12 +11,17 @@ import java.util.TreeMap;
 import org.springframework.stereotype.Service;
 
 import br.com.spdata.apisalario.api.model.ParametrosModel;
+import br.com.spdata.apisalario.domain.SalarioInvalidoException;
 import br.com.spdata.apisalario.domain.model.AliquotaIrrfModel;
 
 @Service
 public class SalarioService {
 
 	public BigDecimal calculaSalarioLiquido(BigDecimal salarioBruto, ParametrosModel parametros) {
+		
+		if(salarioBruto.compareTo(new BigDecimal("0.00")) <= 0) {
+			throw new SalarioInvalidoException("Erro! O salário informado tem que ser maior que R$0,00");
+		}
 		
 		BigDecimal salarioLiquido = new BigDecimal("0.00").add(salarioBruto);
 		
