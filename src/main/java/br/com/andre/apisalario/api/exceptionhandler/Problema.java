@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.api.exceptionhandler;
+package br.com.andre.apisalario.api.exceptionhandler;
 
 import java.time.OffsetDateTime;
 import java.util.List;

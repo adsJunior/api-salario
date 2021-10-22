@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.api.exceptionhandler;
+package br.com.andre.apisalario.api.exceptionhandler;
 
 import java.time.OffsetDateTime;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.spdata.apisalario.domain.exception.SalarioInvalidoException;
+import br.com.andre.apisalario.domain.exception.SalarioInvalidoException;
 
 @ControllerAdvice
 public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
