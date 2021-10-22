@@ -17,7 +17,7 @@ Após clonar o repositório para a sua máquina, faça a instalação das depend
 # Testando a api
 A api está subindo na porta padrão do Spring (8080), porém isso pode ser facilmente modificado no arquivo "application.properties".
 
-Para testar a api, ponha o projeto para executara, depois utilize alguma ferramenta para testar REST apis (como o Postman). A url a ser testada é localhost:8080/salario/{valor} onde "{valor}" é o valor numérico do salário bruto. Além disso, há alguns parâmetros a serem informados no corpo da requisição, como mencionado anteriormente. O corpo da requisição deve ser enviado com o formato JSON, e deve ter a seguinte estrutura:
+Para testar a api, execute o projeto, depois utilize alguma ferramenta para testar REST apis (como o Postman). A url a ser testada é localhost:8080/salario/{valor} onde "{valor}" é o valor numérico do salário bruto. Além disso, há alguns parâmetros a serem informados no corpo da requisição, como mencionado anteriormente. O corpo da requisição deve ser enviado com o formato JSON, e deve ter a seguinte estrutura:
 
 `{
     "numeroDependentes": 0,
