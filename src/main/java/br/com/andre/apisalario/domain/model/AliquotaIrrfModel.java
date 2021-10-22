@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.domain.model;
+package br.com.andre.apisalario.domain.model;
 
 import java.math.BigDecimal;
 
