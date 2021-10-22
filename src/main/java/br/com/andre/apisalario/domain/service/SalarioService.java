@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.domain.service;
+package br.com.andre.apisalario.domain.service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -10,9 +10,9 @@ import java.util.TreeMap;
 
 import org.springframework.stereotype.Service;
 
-import br.com.spdata.apisalario.api.model.ParametrosModel;
-import br.com.spdata.apisalario.domain.exception.SalarioInvalidoException;
-import br.com.spdata.apisalario.domain.model.AliquotaIrrfModel;
+import br.com.andre.apisalario.api.model.ParametrosModel;
+import br.com.andre.apisalario.domain.exception.SalarioInvalidoException;
+import br.com.andre.apisalario.domain.model.AliquotaIrrfModel;
 
 @Service
 public class SalarioService {

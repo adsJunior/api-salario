@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.api.model;
+package br.com.andre.apisalario.api.model;
 
 import java.math.BigDecimal;
 

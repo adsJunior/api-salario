@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.domain.exception;
+package br.com.andre.apisalario.domain.exception;
 
 import java.io.Serializable;
 

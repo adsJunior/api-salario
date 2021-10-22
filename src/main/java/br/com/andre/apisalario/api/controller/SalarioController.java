@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.api.controller;
+package br.com.andre.apisalario.api.controller;
 
 import java.math.BigDecimal;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.spdata.apisalario.api.model.ParametrosModel;
-import br.com.spdata.apisalario.domain.service.SalarioService;
+import br.com.andre.apisalario.api.model.ParametrosModel;
+import br.com.andre.apisalario.domain.service.SalarioService;
 
 @RestController
 @RequestMapping("/salario")

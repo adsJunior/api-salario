@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario;
+package br.com.andre.apisalario;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

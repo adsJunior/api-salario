@@ -1,4 +1,4 @@
-package br.com.spdata.apisalario.domain.service;
+package br.com.andre.apisalario.domain.service;
 
 import java.math.BigDecimal;
 
@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import br.com.spdata.apisalario.api.model.ParametrosModel;
-import br.com.spdata.apisalario.domain.exception.SalarioInvalidoException;
+import br.com.andre.apisalario.api.model.ParametrosModel;
+import br.com.andre.apisalario.domain.exception.SalarioInvalidoException;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
